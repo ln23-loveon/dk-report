@@ -157,7 +157,6 @@ mail.HTMLBody = f"""<!DOCTYPE html>
         <h2>📋 每日党建简报</h2>
         <p>您好，</p>
         <p>以下是每日党建简报的相关资料，请查收。</p>
-
         <h3>1. 在线查看链接</h3>
         <div class="link-box">
             <a href="{pages_url}">{pages_url}</a>
@@ -166,9 +165,8 @@ mail.HTMLBody = f"""<!DOCTYPE html>
             <a href="{click_url}" class="btn">点击此处查看 card.html（带点击统计）</a>
         </p>
      
-
         <h3>2. 二维码</h3>
-        <p>扫描下方二维码可直接访问 GitHub 页面：</p>
+        <p>扫描下方二维码可直接访问：</p>
         <div class="img-box">
             <img src="cid:qrcode.png" alt="二维码" width="220">
         </div>
