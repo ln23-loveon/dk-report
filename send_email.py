@@ -1,11 +1,12 @@
 import qrcode
 import os
 import socket
+import datetime
 import win32com.client as win32
 
 # ==================== 配置 ====================
 base_dir = r"D:\code\python\dj"
-briefing_date = "2026-06-02"
+briefing_date = datetime.datetime.now().strftime("%Y-%m-%d")
 qr_path = os.path.join(base_dir, "file", "qrcode.png")
 card_png_path = os.path.join(base_dir, "file", briefing_date, "card.png")
 github_url = f"https://github.com/ln23-loveon/dk-report/blob/master/file/{briefing_date}/card.html"

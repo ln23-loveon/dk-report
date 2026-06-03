@@ -14,6 +14,11 @@ from matplotlib.ticker import FormatStrFormatter
 base_dir = r"D:\code\python\dj"
 # 自动获取系统当前日期（格式：YYYY-MM-DD）
 briefing_date = datetime.datetime.now().strftime("%Y-%m-%d")
+# 格式化日期显示和星期
+date_obj = datetime.datetime.strptime(briefing_date, "%Y-%m-%d")
+formatted_date = f"{date_obj.year}年{date_obj.month}月{date_obj.day}日"
+weekdays = ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"]
+weekday_str = weekdays[date_obj.weekday()]
 stock_ticker = "0992.HK"
 stock_name = "联想集团"
 story_theme = "random"
@@ -274,7 +279,7 @@ html_template = f"""<!DOCTYPE html>
     <div class="container">
         <div class="header">
             <h1>📋 每日党建简报</h1>
-            <div class="date">{briefing_date.replace('-', '年').replace('06', '6').replace('02', '2日')} | 星期二 | 来源：AI 自动生成</div>
+            <div class="date">{formatted_date} | {weekday_str} | 来源：AI 自动生成</div>
         </div>
 
         <!-- Part 1: 党员必会 -->
