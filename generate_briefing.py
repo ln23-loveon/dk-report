@@ -12,7 +12,8 @@ from matplotlib.ticker import FormatStrFormatter
 
 # ==================== 配置 ====================
 base_dir = r"D:\code\python\dj"
-briefing_date = "2026-06-02"
+# 自动获取系统当前日期（格式：YYYY-MM-DD）
+briefing_date = datetime.datetime.now().strftime("%Y-%m-%d")
 stock_ticker = "0992.HK"
 stock_name = "联想集团"
 story_theme = "random"

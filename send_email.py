@@ -179,7 +179,7 @@ mail.HTMLBody = f"""<!DOCTYPE html>
         {tracking_pixel}
 
         <div class="footer">
-            <p>本邮件由系统自动发送 | 数据截至 2026-06-01</p>
+            <p>本邮件由系统自动发送 </p>
         </div>
     </div>
 </body>
