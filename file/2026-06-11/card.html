@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4-2支部每日简报 - 2026-06-11</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", sans-serif;
+            background-color: #f5f5f5;
+            color: #444;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .header {
+            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 2px 8px rgba(192, 57, 43, 0.3);
+        }
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+        .header .subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+            letter-spacing: 1px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px 16px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            margin-bottom: 24px;
+            overflow: hidden;
+        }
+        .card-header {
+            padding: 20px 24px 0;
+        }
+        .card-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #333;
+            border-left: 4px solid #c0392b;
+            padding-left: 12px;
+            line-height: 1.4;
+        }
+        .card-body {
+            padding: 16px 24px 24px;
+        }
+        .news-item {
+            padding: 16px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+        .news-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .news-title a:hover {
+            color: #c0392b;
+        }
+        .news-meta {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 8px;
+        }
+        .news-summary {
+            font-size: 15px;
+            color: #555;
+            text-indent: 2em;
+            line-height: 1.8;
+        }
+        .quote-block {
+            background: #fafafa;
+            border-left: 4px solid #c0392b;
+            padding: 16px 20px;
+            margin: 12px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .quote-block p {
+            font-size: 15px;
+            color: #555;
+            text-indent: 2em;
+            line-height: 1.8;
+            margin-bottom: 8px;
+        }
+        .quote-block p:last-child {
+            margin-bottom: 0;
+        }
+        .quote-block .quote-source {
+            font-size: 13px;
+            color: #999;
+            text-align: right;
+            text-indent: 0;
+            margin-top: 8px;
+        }
+        .data-highlight {
+            background: #fdf2f2;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 12px 0;
+        }
+        .data-highlight .data-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #fce8e8;
+        }
+        .data-highlight .data-row:last-child {
+            border-bottom: none;
+        }
+        .data-highlight .data-label {
+            font-size: 15px;
+            color: #555;
+        }
+        .data-highlight .data-value {
+            font-size: 15px;
+            font-weight: 700;
+            color: #c0392b;
+        }
+        .data-highlight .data-value.up {
+            color: #27ae60;
+        }
+        .data-highlight .data-value.down {
+            color: #c0392b;
+        }
+        .chart-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 12px auto;
+        }
+        .footer {
+            text-align: center;
+            padding: 24px 16px 40px;
+            font-size: 13px;
+            color: #999;
+        }
+        .footer p {
+            margin-bottom: 4px;
+        }
+        @media (max-width: 768px) {
+            .header { padding: 28px 16px; }
+            .header h1 { font-size: 22px; }
+            .container { padding: 16px 12px; }
+            .card-header { padding: 16px 16px 0; }
+            .card-body { padding: 12px 16px 16px; }
+            .card-title { font-size: 18px; }
+            .news-title { font-size: 16px; }
+            .news-summary, .quote-block p { font-size: 14px; }
+            .data-highlight .data-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>4-2支部每日简报</h1>
+        <p class="subtitle">2026年6月11日 星期四</p>
+    </header>
+
+    <div class="container">
+
+        <!-- 市场动态 -->
+        <section class="card">
+            <div class="card-header">
+                <h2 class="card-title">市场动态</h2>
+            </div>
+            <div class="card-body">
+                <div class="data-highlight">
+                    <div class="data-row">
+                        <span class="data-label">联想集团 (0992.HK)</span>
+                        <span class="data-value">23.00 HKD</span>
+                    </div>
+                    <div class="data-row">
+                        <span class="data-label">近7日涨跌</span>
+                        <span class="data-value down">-3.14 HKD (-12.01%)</span>
+                    </div>
+                    <div class="data-row">
+                        <span class="data-label">7日最高</span>
+                        <span class="data-value">26.72 HKD (06-03)</span>
+                    </div>
+                    <div class="data-row">
+                        <span class="data-label">7日最低</span>
+                        <span class="data-value">22.60 HKD (06-10)</span>
+                    </div>
+                </div>
+                <img src="lx_stock/lenovo_stock_chart.png" alt="联想近7日股价走势图" class="chart-img">
+            </div>
+        </section>
+
+        <!-- 党员必会 -->
+        <section class="card">
+            <div class="card-header">
+                <h2 class="card-title">党员必会</h2>
+            </div>
+            <div class="card-body">
+                <div class="quote-block">
+                    <p>第一章 党员</p>
+                    <p>第一条 年满十八岁的中国工人、农民、军人、知识分子和其他社会阶层的先进分子，承认党的纲领和章程，愿意参加党的一个组织并在其中积极工作、执行党的决议和按期交纳党费的，可以申请加入中国共产党。</p>
+                    <p>第二条 中国共产党党员是中国工人阶级的有共产主义觉悟的先锋战士。中国共产党党员必须全心全意为人民服务，不惜牺牲个人的一切，为实现共产主义奋斗终身。中国共产党党员永远是劳动人民的普通一员。</p>
+                    <p class="quote-source">—— 《中国共产党章程》</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 党员故事 -->
+        <section class="card">
+            <div class="card-header">
+                <h2 class="card-title">党员故事</h2>
+            </div>
+            <div class="card-body">
+                <div class="quote-block">
+                    <p><strong>邹军</strong>，肃州区畜牧兽医技术服务中心高级兽医师，2000年6月加入中国共产党。该同志党性原则强、政治素养高。能够牢固树立"四个意识"，切实加强党性修养，自觉学习党的最新理论成果，坚持学用结合，在思想上、行动上与党组织保持高度一致，严守党的政治纪律和政治规矩。识大体，顾大局，敢于担当，吃苦精神强。工作思路清晰，讲究工作方法，善于抓主抓重，重点工作任务落实上办法多，思路广，工作成效突出。</p>
+                    <p class="quote-source">—— 共产党员网先进事迹</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联想资讯 -->
+        <section class="card">
+            <div class="card-header">
+                <h2 class="card-title">联想资讯</h2>
+            </div>
+            <div class="card-body">
+                <article class="news-item">
+                    <h3 class="news-title"><a href="https://investor.lenovo.com/tc/financial/results/press_2526_q3.pdf">联想集团：2025/26 财年第三季度业绩</a></h3>
+                    <p class="news-meta">联想官网 · 2026-02-12</p>
+                    <p class="news-summary">联想集团公布2025/26财年第三季度业绩，本季营业额突破财季历史最高纪录，达222亿美元，年比年提升18%，所有业务集团均实现年比年双位数增长。调整后净利润年比年增长36%，达到5.89亿美元。人工智能相关营业额年比年增长72%，占集团整体营业额近三分之一(32%)。个人电脑市场份额创下2025年度集团历史最高，达24.9%。</p>
+                </article>
+                <article class="news-item">
+                    <h3 class="news-title"><a href="https://mbrand.lenovo.com.cn/brand/ppn03609.html">史上最大规模Tech World！联想进入混合式AI普惠新纪元</a></h3>
+                    <p class="news-meta">联想品牌官网 · 2026-01-07</p>
+                    <p class="news-summary">当地时间1月6日，史上最大规模联想创新科技大会在拉斯维加斯Sphere举办，联想集团董事长兼CEO杨元庆重磅发布面向全球的首款个人超级智能体Lenovo Qira。作为跨平台、跨设备的AI终端入口，它能将用户的手机、电脑、平板、可穿戴设备等不同终端设备连接起来，高效执行任务。联想Qira荣获国际消费电子展"Best of CES"大奖。</p>
+                </article>
+                <article class="news-item">
+                    <h3 class="news-title"><a href="https://www.lenovo.com.cn/wiki/article-48561.html">联想携手全球AI巨头，共绘混合式AI清晰未来</a></h3>
+                    <p class="news-meta">联想乐享知识库 · 2026-05-28</p>
+                    <p class="news-summary">联想集团在Tech World上公布了下一阶段Smarter AI for all愿景，推出面向企业的联想Hybrid AI Advantage（混合式人工智能优势集）、新一代联想Neptune海神液冷服务器、最新ThinkPad X1 2合1 Aura Edition AI PC、联想AI Now等产品。第六代Neptune海神液冷系统可将数据中心功耗降低高达40%。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- AI热点 -->
+        <section class="card">
+            <div class="card-header">
+                <h2 class="card-title">AI热点</h2>
+            </div>
+            <div class="card-body">
+                <article class="news-item">
+                    <h3 class="news-title"><a href="https://www.36kr.com/p/3440763123111301">"人工智能+"行动意见发布，联想以超级智能体迎AI大时代</a></h3>
+                    <p class="news-meta">36氪 · 2025-08-27</p>
+                    <p class="news-summary">国务院印发《关于深入实施"人工智能+"行动的意见》，提出到2027年率先实现人工智能与6大重点领域广泛深度融合，新一代智能终端、智能体等应用普及率超70%。联想集团执行副总裁兼中国区总裁刘军表示，从2017年起联想就把助力中国智能化转型作为使命，2025年是超级智能体元年，联想正聚焦混合式AI战略，锚定个人智能和企业智能，加速AI普惠的进程。</p>
+                </article>
+                <article class="news-item">
+                    <h3 class="news-title"><a href="http://mp.weixin.qq.com/s?__biz=MzA4MzE4MDMzNg==&mid=2650540672">联想三大超级智能体首度亮相WAIC 2025 让AI成为创新生产力</a></h3>
+                    <p class="news-meta">微信公众平台 · 2025-07-27</p>
+                    <p class="news-summary">7月26日-29日，世界人工智能大会（WAIC 2025）在沪隆重举行。联想集团首次于WAIC亮相了天禧个人超级智能体、联想乐享企业超级智能体及城市超级智能体。天禧个人超级智能体携AI操控、AI搜索、AI翻译、AI笔记、AI服务五大黄金功能，重新定义智能交互体验。在企业智能方面，联想乐享超级智能体、城市超级智能体领衔呈现了联想在加速行业智能化转型与智慧城市4.0建设方面的创新实践。</p>
+                </article>
+                <article class="news-item">
+                    <h3 class="news-title"><a href="https://www.lenovo.com.cn/wiki/article-48158.html">联想全栈智能全面升级 AI普慧迎奇点时刻</a></h3>
+                    <p class="news-meta">联想乐享知识库 · 2026-05-28</p>
+                    <p class="news-summary">在主题为"AI for All"的联想创新科技大会上，联想展示了人工智能设备产品组合，发布个人与企业级人工智能双胞胎（AI Twin）。联想集团首席技术官芮勇博士表示，人工智能是公共、私域和个人大模型的有机结合，联想的"端-边-云-网-智"新IT架构将很好地支撑这种混合AI框架。联想发布了革命性的AI PC，通过建立个性化本地知识库及模型压缩技术，使得其可以运行个人大模型，实现多模态下更加自然的AI交互。</p>
+                </article>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="footer">
+        <p>仅供内部学习参考</p>
+        <p>4-2支部 · 2026年6月11日</p>
+    </footer>
+
+</body>
+</html>
