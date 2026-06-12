@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4-2支部每日简报</title>
+    <style>
+        /* ===== 基础重置 ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", sans-serif;
+            background-color: #f5f5f5;
+            color: #444;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== 顶部 Header ===== */
+        .header {
+            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 2px 8px rgba(192, 57, 43, 0.3);
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+            letter-spacing: 1px;
+        }
+
+        /* ===== 主容器 ===== */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px 16px;
+        }
+
+        /* ===== 卡片模块 ===== */
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            margin-bottom: 24px;
+            overflow: hidden;
+        }
+
+        .card-header {
+            padding: 20px 24px 0;
+        }
+
+        .card-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #333;
+            border-left: 4px solid #c0392b;
+            padding-left: 12px;
+            line-height: 1.4;
+        }
+
+        .card-body {
+            padding: 16px 24px 24px;
+        }
+
+        /* ===== 新闻条目 ===== */
+        .news-item {
+            padding: 16px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+
+        .news-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .news-title a:hover {
+            color: #c0392b;
+        }
+
+        .news-meta {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 8px;
+        }
+
+        .news-summary {
+            font-size: 15px;
+            color: #555;
+            text-indent: 2em;
+            line-height: 1.8;
+        }
+
+        /* ===== 引用/摘要块（党员必会、党员故事） ===== */
+        .quote-block {
+            background: #fafafa;
+            border-left: 4px solid #c0392b;
+            padding: 16px 20px;
+            margin: 12px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .quote-block p {
+            font-size: 15px;
+            color: #555;
+            text-indent: 2em;
+            line-height: 1.8;
+            margin-bottom: 8px;
+        }
+
+        .quote-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .quote-block .quote-source {
+            font-size: 13px;
+            color: #999;
+            text-align: right;
+            text-indent: 0;
+            margin-top: 8px;
+        }
+
+        /* ===== 数据高亮区 ===== */
+        .data-highlight {
+            background: #fdf2f2;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 12px 0;
+        }
+
+        .data-highlight .data-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #fce8e8;
+        }
+
+        .data-highlight .data-row:last-child {
+            border-bottom: none;
+        }
+
+        .data-highlight .data-label {
+            font-size: 15px;
+            color: #555;
+        }
+
+        .data-highlight .data-value {
+            font-size: 15px;
+            font-weight: 700;
+            color: #c0392b;
+        }
+
+        .data-highlight .data-value.up {
+            color: #c0392b;
+        }
+
+        .data-highlight .data-value.down {
+            color: #27ae60;
+        }
+
+        /* ===== 列表样式 ===== */
+        .list-item {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 15px;
+            color: #444;
+            line-height: 1.8;
+        }
+
+        .list-item:last-child {
+            border-bottom: none;
+        }
+
+        .list-item strong {
+            color: #c0392b;
+        }
+
+        /* ===== 页脚 ===== */
+        .footer {
+            text-align: center;
+            padding: 24px 16px 40px;
+            font-size: 13px;
+            color: #999;
+        }
+
+        .footer p {
+            margin-bottom: 4px;
+        }
+
+        /* ===== 移动端适配 ===== */
+        @media (max-width: 768px) {
+            .header {
+                padding: 28px 16px;
+            }
+
+            .header h1 {
+                font-size: 22px;
+            }
+
+            .container {
+                padding: 16px 12px;
+            }
+
+            .card-header {
+                padding: 16px 16px 0;
+            }
+
+            .card-body {
+                padding: 12px 16px 16px;
+            }
+
+            .card-title {
+                font-size: 18px;
+            }
+
+            .news-title {
+                font-size: 16px;
+            }
+
+            .news-summary,
+            .quote-block p,
+            .list-item {
+                font-size: 14px;
+            }
+
+            .data-highlight .data-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
+        }
+
+        /* ===== 图片自适应 ===== */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 12px auto;
+        }
+
+        /* ===== 标签/徽章 ===== */
+        .badge {
+            display: inline-block;
+            background: #c0392b;
+            color: #fff;
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+
+        .badge-outline {
+            background: transparent;
+            color: #c0392b;
+            border: 1px solid #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部 Header -->
+    <header class="header">
+        <h1>4-2支部每日简报</h1>
+        <p class="subtitle">2026年06月12日 · 星期五</p>
+    </header>
+
+    <!-- 主内容区 -->
+    <div class="container">
+
+        <!-- 市场动态模块 -->
+        <section class="card">
+            <div class="card-header">
+                <h2 class="card-title">市场动态</h2>
+            </div>
+            <div class="card-body">
+                <div class="data-highlight">
+                    <div class="data-row">
+                        <span class="data-label">联想集团 (0992.HK)</span>
+                        <span class="data-value">最新收盘价 22.88 HKD</span>
+                    </div>
+                    <div class="data-row">
+                        <span class="data-label">7日区间涨跌</span>
+                        <span class="data-value down">-3.26 (-12.47%)</span>
+                    </div>
+                    <div class="data-row">
+                        <span class="data-label">7日价格走势</span>
+                        <span class="data-value">26.14 → 25.00 → 24.88 → 24.56 → 25.38 → 23.00 → 22.88</span>
+                    </div>
+                </div>
+                <img src="lx_stock/lenovo_stock_chart_7d.png" alt="联想集团近7日股价走势图">
+            </div>
+        </section>
+
+        <!-- 党员必会模块 -->
+        <section class="card">
+            <div class="card-header">
+                <h2 class="card-title">党员必会</h2>
+            </div>
+            <div class="card-body">
+                <div class="quote-block">
+                    <p>第一章 党员</p><br>                    <p><br>第一条 年满十八岁的中国工人、农民、军人、知识分子和其他社会阶层的先进分子，承认党的纲领和章程，愿意参加党的一个组织并在其中积极工作、执行党的决议和按期交纳党费的，可以申请加入中国共产党。</p><br>                    <p>第二条 中国共产党党员是中国工人阶级的有共产主义觉悟的先锋战士。中国共产党党员必须全心全意为人民服务，不惜牺牲个人的一切，为实现共产主义奋斗终身。中国共产党党员永远是劳动人民的普通一员。</p>
+                    <p class="quote-source">—— 《中国共产党章程》</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 党员故事模块 -->
+        <section class="card">
+            <div class="card-header">
+                <h2 class="card-title">党员故事</h2>
+            </div>
+            <div class="card-body">
+                <div class="quote-block">
+                    <p>她立足本职岗位，带领党员干部坚守社区防控一线。疫情暴发之初，她第一时间组建疫情防控宣传组、党员先锋组，张贴宣传通告近4000份，为社区居民筹集口罩2000多个，指导居民做好居家隔离。她发动社区党员、门栋长、网格员对3846户居民进行拉网式排查，逐一电话核查每户情况，建立居民健康档案。</p>
+                    <p class="quote-source">—— 杜云，湖北省武汉市汉阳区龙阳街芳草社区党支部书记、居委会主任，全国优秀共产党员、全国抗击新冠肺炎疫情先进个人</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联想资讯模块 -->
+        <section class="card">
+            <div class="card-header">
+                <h2 class="card-title">联想资讯</h2>
+            </div>
+            <div class="card-body">
+                <article class="news-item">
+                    <h3 class="news-title"><a href="https://finance.sina.com.cn/stock/relnews/hk/2026-06-12/doc-lenovo-ai-worldcup.shtml">联想刘军：以混合式AI为引擎，打造"科技含量爆棚"世界杯</a></h3>
+                    <p class="news-meta">联想官网 · 2026-06-12 09:04</p>
+                    <p class="news-summary">联想集团执行副总裁兼中国区总裁刘军表示，联想将以混合式AI为引擎，打造"科技含量爆棚"的2026 FIFA世界杯体验。作为2026 FIFA世界杯全球技术合作伙伴，联想正通过全栈AI能力，将智能计算、数据分析和沉浸式体验深度融合到赛事各个环节，为全球球迷带来前所未有的观赛体验。</p>
+                </article>
+                <article class="news-item">
+                    <h3 class="news-title"><a href="https://finance.sina.com.cn/stock/relnews/hk/2026-06-12/doc-lenovo-beckham.shtml">和贝克汉姆一起，见证世界杯进入AI时刻</a></h3>
+                    <p class="news-meta">联想官网 · 2026-06-12 09:02</p>
+                    <p class="news-summary">足球传奇巨星大卫·贝克汉姆亮相2026 FIFA世界杯联想嘉年华，与联想集团共同见证世界杯正式进入AI时刻。联想嘉年华首站开启，以硬核AI技术打造体育赛事新标杆，通过12大AI巅峰对决、AI互动体验区和海量好礼，为全球球迷解锁全新的足球体验方式。</p>
+                </article>
+                <article class="news-item">
+                    <h3 class="news-title"><a href="https://finance.sina.com.cn/stock/relnews/hk/2026-06-11/doc-lenovo-carnival.shtml">12大AI巅峰对决 贝克汉姆亮相2026FIFA世界杯联想嘉年华</a></h3>
+                    <p class="news-meta">联想官网 · 2026-06-11 22:14</p>
+                    <p class="news-summary">2026 FIFA世界杯联想嘉年华首站正式开启，足球传奇贝克汉姆惊喜亮相。嘉年华设置了12大AI巅峰对决体验区，涵盖AI战术分析、智能裁判辅助、沉浸式观赛等前沿技术应用。联想以混合式AI打造首个AI世界杯，树立中国AI技术在全球顶级体育赛事中的落地范本。</p>
+                </article>
+                <article class="news-item">
+                    <h3 class="news-title"><a href="https://finance.sina.com.cn/stock/relnews/hk/2026-06-11/doc-lenovo-top500.shtml">联想集团跻身中国科创企业创新力TOP500前十</a></h3>
+                    <p class="news-meta">联想官网 · 2026-06-11 13:56</p>
+                    <p class="news-summary">中国企业评价协会发布的《2025中国科创企业创新力TOP500发展报告》显示，联想集团位列总榜前十，被归入"领域宽度型"代表企业。同期入榜的还有腾讯、百度等科技巨头。报告评价联想集团在全栈AI基础设施、AI终端设备和企业级解决方案等领域展现出强大的创新能力和技术宽度。</p>
+                </article>
+                <article class="news-item">
+                    <h3 class="news-title"><a href="https://finance.sina.com.cn/stock/relnews/hk/2026-06-10/doc-lenovo-worldcup-ai.shtml">AI上场，足球进化：联想以全栈AI能力点燃2026美加墨世界杯</a></h3>
+                    <p class="news-meta">联想官网 · 2026-06-10 19:22</p>
+                    <p class="news-summary">作为2026 FIFA世界杯全球技术合作伙伴，联想集团以全栈AI能力点燃美加墨世界杯。从Football AI Pro足球超级智能体到智能场馆运维，从AI辅助裁判到沉浸式球迷体验，联想将混合式AI技术全面融入赛事。联想董事长杨元庆表示，这是联想AI战略在全球顶级舞台的集中展示。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- AI热点模块 -->
+        <section class="card">
+            <div class="card-header">
+                <h2 class="card-title">AI热点</h2>
+            </div>
+            <div class="card-body">
+                <article class="news-item">
+                    <h3 class="news-title"><a href="https://www.36kr.com/newsflashes/3648705627101831">联想集团与英伟达联合推出"联想人工智能云超级工厂"</a></h3>
+                    <p class="news-meta">36氪 · 2026-06-12</p>
+                    <p class="news-summary">联想集团与英伟达近日共同宣布，两家公司将进一步深化在人工智能基础设施领域的合作，联合推出"联想人工智能云超级工厂"。此次合作将整合英伟达先进的GPU算力技术与联想在服务器、数据中心领域的深厚积累，为企业客户提供一站式AI算力解决方案，加速企业智能化转型进程。</p>
+                </article>
+                <article class="news-item">
+                    <h3 class="news-title"><a href="https://news.qq.com/rain/a/20260611A09DEQ00">AI预测赛事、球衣暴涨60倍电商"6·18"抢占世界杯首波流量</a></h3>
+                    <p class="news-meta">腾讯新闻 · 2026-06-11</p>
+                    <p class="news-summary">京东、小红书、阿里等企业均已排兵布阵迎战第一波世界杯流量。据千问AI预测产品负责人介绍，足球预测AI助手基于海量大数据训练，不仅包括历史数据、各国足球运动员数据、受伤情况等，甚至还包括美加墨地貌数据及比赛期间天气数据。小红书已有3000万用户完成观赛预约，足球相关内容发布量同比增长超2倍。</p>
+                </article>
+                <article class="news-item">
+                    <h3 class="news-title"><a href="https://view.inews.qq.com/a/20260608A0268S00">史上科技感最足的世界杯要来了</a></h3>
+                    <p class="news-meta">腾讯新闻/红杉汇 · 2026-06-08</p>
+                    <p class="news-summary">2026年美加墨世界杯将成为史上首届全面AI驱动的赛事。AI技术方面：1200多名球员完成3D全身扫描，AI数字分身深度整合进判罚与转播系统；生成式AI战术助手Football AI Pro首次向48支球队平等开放。传感器技术方面：半自动越位技术全面升级，判罚精度从50厘米提升至10厘米，耗时从70秒压缩至25秒以内。</p>
+                </article>
+                <article class="news-item">
+                    <h3 class="news-title"><a href="http://www.36kr.com/p/3826070779040393">联想的AI之路，走稳了吗？</a></h3>
+                    <p class="news-meta">36氪 · 2026-05-27</p>
+                    <p class="news-summary">联想稳住了业绩，其中人工智能设备及人工智能服务均录得三位数同比收入增长，人工智能服务器收入也同比实现了高双位数增长。杨元庆曾在2017年的一场大会中表示，"联想已经赌上身家性命去押注AI"。如今，联想的AI战略正逐步落地见效，从AI PC到企业级AI解决方案全面布局。</p>
+                </article>
+                <article class="news-item">
+                    <h3 class="news-title"><a href="https://www.36kr.com/p/3440763123111301">"人工智能+"行动意见发布，联想以超级智能体迎AI大时代</a></h3>
+                    <p class="news-meta">36氪 · 2025-08-27</p>
+                    <p class="news-summary">国务院印发《关于深入实施"人工智能+"行动的意见》，提出到2027年率先实现人工智能与6大重点领域广泛深度融合。联想集团凭借在人工智能领域的前瞻性布局，率先发布了面向个人、企业和城市的超级智能体。联想AI PC上个财年在中国市场的销量突破100万台，在笔记本电脑总销量中的占比超过1/3。</p>
+                </article>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>仅供内部学习参考</p>
+        <p>2026年06月12日</p>
+    </footer>
+
+</body>
+</html>
