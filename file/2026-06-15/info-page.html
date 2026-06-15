@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>资讯简报 - 内部学习参考</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+      background: #f5f5f5;
+      color: #444;
+      line-height: 1.8;
+      padding: 0;
+    }
+    .header {
+      background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px 30px;
+    }
+    .header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 4px;
+    }
+    .header .subtitle {
+      font-size: 14px;
+      margin-top: 8px;
+      opacity: 0.85;
+    }
+    .header .date {
+      font-size: 13px;
+      margin-top: 6px;
+      opacity: 0.7;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 16px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      padding: 28px 24px;
+      margin-bottom: 20px;
+    }
+    .module-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #333;
+      border-left: 4px solid #c0392b;
+      padding-left: 14px;
+      margin-bottom: 18px;
+      line-height: 1.4;
+    }
+    .news-item {
+      padding: 14px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .news-item:last-child {
+      border-bottom: none;
+    }
+    .news-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 6px;
+    }
+    .news-body {
+      font-size: 15px;
+      color: #555;
+      text-indent: 2em;
+      line-height: 1.8;
+    }
+    .news-meta {
+      font-size: 13px;
+      color: #999;
+      margin-top: 6px;
+    }
+    .news-meta .source {
+      margin-right: 12px;
+    }
+    .quote-block {
+      background: #fafafa;
+      border-left: 4px solid #c0392b;
+      padding: 16px 20px;
+      margin: 12px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 15px;
+      color: #555;
+      line-height: 1.8;
+    }
+    .highlight-box {
+      background: #fdf2f2;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 12px 0;
+      font-size: 15px;
+      color: #444;
+    }
+    .highlight-box .num {
+      color: #c0392b;
+      font-weight: 700;
+    }
+    .highlight-box .green {
+      color: #27ae60;
+      font-weight: 700;
+    }
+    .footer {
+      text-align: center;
+      color: #999;
+      font-size: 13px;
+      padding: 30px 16px 20px;
+    }
+    @media (max-width: 640px) {
+      .header h1 { font-size: 22px; }
+      .module-title { font-size: 19px; }
+      .card { padding: 20px 16px; }
+      .news-title { font-size: 16px; }
+      .news-body { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>📋 资讯简报</h1>
+    <div class="subtitle">内部学习参考 · 每日精选</div>
+    <div class="date">2026年6月15日 星期一</div>
+  </div>
+
+  <div class="container">
+
+    <!-- ===== 1. 市场动态 ===== -->
+    <div class="card">
+      <div class="module-title">📈 市场动态</div>
+
+      <div class="news-item">
+        <div class="news-title">联想集团（00992.HK）近七日股价走势</div>
+        <div class="highlight-box">
+          最新收盘价：<span class="num">22.34 港元</span><br>
+          7日区间涨跌：<span class="green">-2.66 港元 (-10.64%)</span><br>
+          7日走势：25.00 → 24.88 → 24.56 → 25.38 → 23.00 → 22.88 → 22.34<br>
+          区间最高：25.38（6月9日）｜区间最低：22.06（6月12日）
+        </div>
+        <div class="news-body">
+          联想集团近7日股价呈先涨后跌走势。6月9日受AI PC新品发布及英伟达合作消息提振，股价冲高至25.38港元；随后受世界杯开幕利好兑现及获利回吐影响，连续回调至22.34港元。整体来看，联想从4月的9港元附近启动，5月后暴涨至27.42港元创历史新高，近期属正常技术性回调。
+        </div>
+        <div class="news-meta"><span class="source">📰 来源：腾讯财经</span> 2026-06-15</div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-title">联想集团股价大涨近5%，世界杯开幕点燃市场热情</div>
+        <div class="news-body">
+          6月12日，联想集团(00992.HK)股价大涨近5%，盘中一度升至24.2港元。2026年FIFA世界杯于6月12日凌晨开幕，联想作为官方技术合作伙伴，为赛事提供AI Pro足球超级智能体、裁判视角AI视频增强系统等技术支持。联想2025/26财年总收入831亿美元，同比增长20%，创历史新高。
+        </div>
+        <div class="news-meta"><span class="source">📰 来源：网易财经</span> 2026-06-12</div>
+      </div>
+    </div>
+
+    <!-- ===== 2. 党员必会 ===== -->
+    <div class="card">
+      <div class="module-title">📖 党员必会</div>
+
+      <div class="news-item">
+        <div class="news-title">党章学习：党的各级代表大会制度</div>
+        <div class="quote-block">
+          第十一条　党的各级代表大会的代表和委员会的产生，要体现选举人的意志。选举采用无记名投票的方式。候选人名单要由党组织和选举人充分酝酿讨论。可以直接采用候选人数多于应选人数的差额选举办法进行正式选举。也可以先采用差额选举办法进行预选，产生候选人名单，然后进行正式选举。选举人有了解候选人情况、要求改变候选人、不选任何一个候选人和另选他人的权利。任何组织和个人不得以任何方式强迫选举人选举或不选举某个人。
+        </div>
+        <div class="news-body">
+          党章第十一条明确了党的各级代表大会选举制度的核心原则：体现选举人意志、无记名投票、差额选举、充分酝酿。这是党内民主的重要制度保障，确保选举过程公开、公平、公正。
+        </div>
+        <div class="news-meta"><span class="source">📰 来源：《中国共产党章程》</span> 段落长度：199字</div>
+      </div>
+    </div>
+
+    <!-- ===== 3. 党员故事 ===== -->
+    <div class="card">
+      <div class="module-title">⭐ 党员故事</div>
+
+      <div class="news-item">
+        <div class="news-title">张桂梅：大山女孩的引路人</div>
+        <div class="quote-block">
+          张桂梅，中共党员，云南省丽江华坪女子高级中学党支部书记、校长。她扎根贫困地区40余年，创办全国第一所全免费女子高中，帮助近2000名贫困山区女孩圆梦大学。她身患多种疾病，却始终坚守在教育一线，用知识改变贫困山区女孩的命运。张桂梅说："只要我还有一口气，就要站在讲台上。"她用实际行动诠释了共产党员的初心和使命，被授予"全国优秀共产党员""时代楷模""七一勋章"等荣誉称号。
+        </div>
+        <div class="news-body">
+          张桂梅老师的故事激励着无数教育工作者和共产党员，在平凡的岗位上做出不平凡的贡献。她的精神是新时代共产党员的生动写照。
+        </div>
+        <div class="news-meta"><span class="source">📰 来源：共产党员网 (12371.cn)</span> 2026-06-15</div>
+      </div>
+    </div>
+
+    <!-- ===== 4. 联想资讯 ===== -->
+    <div class="card">
+      <div class="module-title">💻 联想资讯</div>
+
+      <div class="news-item">
+        <div class="news-title">蹭上英伟达，闯进世界杯，联想股价起飞</div>
+        <div class="news-body">
+          联想集团股价从9港元附近暴涨至27.42港元，涨幅超3倍，市值突破3400亿港元创历史新高。搭上英伟达AI快车，联想作为RTX Spark首批合作伙伴受益。2025/26财年收入831亿美元创历史新高，AI相关收入同比增长105%，占总营收33%。基础设施方案业务扭亏为盈，三大业务全部实现盈利。
+        </div>
+        <div class="news-meta"><span class="source">📰 来源：深蓝财经/网易</span> 2026-06-14</div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-title">联想集团跻身中国科创企业创新力TOP500前十</div>
+        <div class="news-body">
+          联想集团进入中国科创企业创新力TOP500总榜前十，与华为、中兴、腾讯、百度等同列。联想牵头制定的智能体标准发布实施，10款L3级终端集中亮相，天禧个人超级智能体入选2026中国AI智能体领航者榜单，是榜单中唯一的消费端个人智能体。
+        </div>
+        <div class="news-meta"><span class="source">📰 来源：IT之家/新浪财经</span> 2026-06-11</div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-title">联想集团推出世界杯"补觉卡"：员工可弹性上下班两小时</div>
+        <div class="news-body">
+          6月9日，联想集团作为2026年FIFA世界杯官方合作伙伴，宣布为中国区全体在职员工推出"补觉卡"福利。世界杯期间，员工可选择晚到公司2小时或提前2小时下班。该福利覆盖中国区全体在职员工，在社交平台引发广泛讨论。
+        </div>
+        <div class="news-meta"><span class="source">📰 来源：新浪财经/网易</span> 2026-06-09</div>
+      </div>
+    </div>
+
+    <!-- ===== 5. AI热点 ===== -->
+    <div class="card">
+      <div class="module-title">🤖 AI热点</div>
+
+      <div class="news-item">
+        <div class="news-title">智能体崛起：2026年成大模型差异化分水岭</div>
+        <div class="news-body">
+          2026年，AI智能体（Agent）成为大模型行业的核心关键词。从OpenAI到腾讯、华为、百度，各大科技巨头加速智能体布局。智能体从"对话式AI"向"自主执行型AI"演进，能够自主完成多步骤复杂任务，成为大模型商业化落地的关键路径。业界认为，2026年是大模型从技术能力向实际应用转化的分水岭之年。
+        </div>
+        <div class="news-meta"><span class="source">📰 来源：网易科技</span> 2026-06-11</div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-title">网易有道27B开源小模型直接登顶！语音克隆功能超强</div>
+        <div class="news-body">
+          网易有道宣布"子曰"大模型4.0核心双引擎——多模态模型与语音合成模型全球全量开源。27B参数量的模型在多项评测中达到SOTA水平，其语音克隆功能支持3秒克隆、14种语言，跨语种无口音。开发者可免费下载部署，含54G完整权重。
+        </div>
+        <div class="news-meta"><span class="source">📰 来源：爆角追踪/网易</span> 2026-06-14</div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-title">200+AI专家集结北京，共议世界模型、智能体、具身智能</div>
+        <div class="news-body">
+          2026年智源大会在北京召开，200多位AI专家围绕世界模型、智能体、具身智能等前沿话题展开讨论。大会释放出重要信号：AI正从大语言模型向多模态、具身智能方向快速演进，智能体技术成为连接AI能力与物理世界的关键桥梁。
+        </div>
+        <div class="news-meta"><span class="source">📰 来源：智东西/网易</span> 2026-06-13</div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-title">OpenAI吞并Ona补齐智能体云底座</div>
+        <div class="news-body">
+          OpenAI收购云服务公司Ona，补齐智能体云基础设施。这一举措标志着AI行业重心从大模型训练转向智能体执行，企业级AI应用叙事正在发生根本性转变——从"拥有大模型"到"让智能体执行任务"。
+        </div>
+        <div class="news-meta"><span class="source">📰 来源：智通财经/网易</span> 2026-06-12</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>仅供内部学习参考 · 不构成任何投资建议</p>
+    <p style="margin-top:4px;">数据更新时间：2026-06-15 09:01（北京时间）</p>
+  </div>
+
+</body>
+</html>
